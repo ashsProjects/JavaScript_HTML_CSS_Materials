@@ -1,0 +1,129 @@
+p {
+    background-color: white;
+    color: black;
+    font: 30;
+    font-family: 'Times New Roman', Times, serif;
+    clear: left;
+}
+/*Use # to target specific ids*/
+#p2 {
+    color: rgb(241, 207, 8);
+    border-style: dashed;/*Other types of borders are solid, dotted, double, ridge, groove, inset, outset*/
+    border-width: 5px;
+    border-color: blue;
+    border-radius: 100px;/*Rounds the radius; higher is rounder*/
+    padding: 10px;/*Spacing between border and text*/
+}
+#h3 {
+    border-top-style:dotted;
+    border-bottom-style: groove;
+    border-left-style:inset ;
+    border-bottom-color: silver;
+}
+/*Use . to target specific classes*/
+.odd {
+    color: blueviolet;
+    font-family: "consolas", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: dotted underline;
+    font-size: 20px; /*Remember the pixel size*/
+
+}
+#p4 {
+    background: linear-gradient(to left, skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+}
+#p3 {
+    background-image: url("pic.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#box1 {
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: linear-gradient(white, indigo);
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;/*setting to auto will set the white space as the margin*/
+    /*Using margin-left: auto and margin-right: auto will center the element*/
+
+    /*margin: 20 will set all margins to 20*/
+}
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    font-size: 40px;
+    text-align: center;
+    background: teal;
+    float: right;
+}
+#b1 {
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background-color: honeydew;
+    position:fixed;
+    top: 10px;
+    right: 50px;
+    /*Static is default
+      Relative: Moves the position of the element by values in top, bottom,  left, or right
+      Absolute: Appears relative to its parent class; if na, uses the webpage as the parent
+      Fixed; Will stay in the same spot, even when scrolling
+      Sticky: Sticks to the top of the page when scrolled past where it is on the page
+      */
+}
+
+a:link {
+    color: red;
+}
+a:visited {
+    color: gray;
+}
+a:hover {
+    color: burlywood;
+}
+a:active {
+    color: teal;
+}
+
+button:hover {
+    background-color: lightseagreen
+}
+button:active {
+    background-color: white;
+}
+li:nth-child(even) {
+    background-color: lightcyan;
+}
+li:nth-child(7n) { /*Every 3rd element is highlighted*/
+    background-color: powderblue;
+}
+h2 {
+    width: 250px;
+    height: 250px;
+    /*
+    animation: mySlide;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    */
+    animation: 3s linear 0s infinite running mySlide;
+
+}
+
+@keyframes mySlide {
+    from{margin-left: 100%}
+    to{margin-left: 0%}
+}

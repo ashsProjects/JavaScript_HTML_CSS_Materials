@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> My first website </title>
+        <!--Metatags are used to define the metadata about the webpage-->
+        <meta name="description" content="HTML practice">
+        <meta name="keywords" content = "HTML, tutorial, beginners"><!--Keywords search engines use to associate your web page-->
+        <meta name = "author" content = "Ash">
+        <meta name = "viewport" content = "width = device-width, initial-scale=1.0"> <!--Scales to mobile browser-->
+        <meta charset="UTF-8"><!--Unicode encoding-->
+        <!--<meta http-equip="refresh" content="30">--><!--Refreshes the page every number in content-->
+
+    </head>
+    <body>
+        <!--Introduction to HTML, heading, body, paragraphs, etc.-->
+        <h1> I like pizza</h1>
+        <h2> I do not like pizza </h2>
+        <h3> I like rice </h3>
+        <p> This is some sample text</p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quos aut mollitia repellat corporis vero, optio atque assumenda molestias temporibus nobis vel cum, unde sit repellendus similique, officiis fugiat pariatur?</p>
+        <br>
+        <br><!--Adds a break-->
+        <p> Another piece of text </p>
+        <hr> <!--Adds a horizontal line-->
+        
+        <!--Introduction to Hyperlinks-->
+        <a href = "https://www.google.com" target =_self title="This takes you to Google">
+            <!--Target attribute is used to denote where the link will open: self for same window and blank for new window -->
+            <!--Title denotes what will be shown when hovering over the link-->
+            Google
+        </a> 
+        <br><br>
+        <a href = "page2.html" title = "This takes you to Page 2"> 
+           <!--This hyperlink demonstrates opening another file-->
+            Page 2
+        </a>
+        <br><br>
+        <a href = "mailto: google@gmail.com" target = _self title = "This opens the default email app">
+            Send an email
+        </a>
+        <hr><br>
+        
+        <!--Introduction to Images-->
+        <img src = "pic.jpg" height = "200" width = "250" alt = "This is a meme" title = "DaFuq Girl">
+        <!--Alt attribute is used an accessibility setting that reads the description of the image-->
+        <br>
+        <a href = "https://en.wikipedia.org/wiki/Crocs">
+            <img src = "crocs.avif" height = "200" title = "Sports Mode">
+        </a>
+        <hr><br>
+
+        <!--Intoduction to Audio-->
+        <audio controls muted loop>
+            <!--Autoplay is used to play music automatically-->
+            <!--Muted is used to set volume to mute on default-->
+            <!--Controls displays the interface to control the music-->
+            <!--Loop is used to loop the music-->
+            <!---->
+            <source src = "sound.mp3">
+            <source src = "sound.wav">
+            This browser does not support HTML5 audio formats
+        </audio>
+        <hr><br>
+
+        <!--Introduction to Videos-->
+        <video height = "200" width = "200">
+            <!--autoplay, loop, muted, controls are boolean attributes; same as audio-->
+            <source src = "video.mp4">
+            The video does not exist
+        </video>
+        <hr><br>
+
+        <!--Introduction to Text Formatting Tags-->
+        <p> This is normal text</p>
+        <p> This is <b>bold</b> text</p>
+        <p> This is <i>italic</i> text</p>
+        <p> This is <big>big</big> text</p>
+        <p> This is <small>small</small> text</p>
+        <p> This is <sub>subscript</sub> text</p>
+        <p> This is <sup>superscript</sup> text</p>
+        <p> This is <ins>inserted</ins> text</p>
+        <p> This is <del>deleted</del> text</p>
+        <p> This is <mark>highlighted</mark> text</p>
+        <hr><br>
+
+        <!--Introduction to Lists-->
+        <h4>Unordered List</h4><!--Bulleted Lists-->
+        <ul>
+            <li>Pizza Dough</li>
+            <li>Tomato Sauce</li>
+            <li>Cheese</li>
+            <li>Toppings
+                <ul>
+                    <li>Sausage</li>
+                    <li>Mushrooms</li>
+                    <li>Green Peppers</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <h4>Ordered List</h4><!--Numbered Lists-->
+        <ol type = "A"><!--Type attribute changes the number type; default is number-->
+            <li> Wake up</li>
+            <li> Take a shower</li>
+            <li> Brush teeth</li>
+        </ol>
+        <br>
+        <h4>Description List</h4> 
+        <dl>
+            <dt>HTML</dt>
+            <dd>This adds structure to a webpage</dd>
+        </dl>
+        <hr><br>
+
+        <!--Introduction to Tables-->
+        <h3>Store Hours</h3>
+        <table bgcolor = "black" width = 560>
+            <tr bgcolor = gray><!--Table row Tags-->
+                <th width = "80">Sunday</th><!--Table header Tags-->
+                <th width = "80">Monday</th>
+                <th width = "80">Tuesday</th>
+                <th width = "80">Wednesday</th>
+                <th width = "80">Thursday</th>
+                <th width = "80">Friday</th>
+                <th width = "80">Saturday</th>
+            </tr>
+            <tr bgcolor = lightgray align = center>
+                <!--align attribute aligns the text to a specific position-->
+                <td>Closed</td><!--Table Data Tags-->
+                <td>9-5</td><!--Table Data Tags-->
+                <td>9-5</td><!--Table Data Tags-->
+                <td>9-5</td><!--Table Data Tags-->
+                <td>9-5</td><!--Table Data Tags-->
+                <td>9-5</td><!--Table Data Tags-->
+                <td>Closed</td><!--Table Data Tags-->
+            </tr>
+        </table>
+        <hr><br>
+
+        <!--Introduction to Colors-->
+        <h3 style = "color: red">This is a red heading</h3>
+        <h3 style = "color: rgb(131, 42, 200)">This is another heading </h3>
+        <!--Can use rgb and hex values for colors as well-->
+        <p style = "background-color: azure; color:deeppink">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ea necessitatibus, sunt consequatur porro dolorum quo laborum nihil, enim dicta ipsam ipsum? Voluptatum, accusantium? Tempore alias fugiat aliquid doloremque! Assumenda!</p>
+        <hr><br>
+
+        <!--Introduction to Span and Div-->
+        <h3>Hello!</h3>
+        <!--span adds markup to text or a portion of text-->
+        <!--div defines a division of a document-->
+        <p><span style="color: blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span> Impedit ducimus maxime hic distinctio accusantium, consequatur consectetur nostrum quasi eos. Quidem, recusandae maiores. Deleniti totam, sed amet consequatur quibusdam eum illo?</p>
+        <div style = "color:aqua">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ipsam perspiciatis, similique deserunt, excepturi accusamus eligendi magni, eum modi corporis quos provident quisquam error ab corrupti iste dolores unde nemo.</p>
+        </div>
+        <hr><br>
+
+        <!--Introduction to IFrames-->
+        <!--iframes are used to embed content from another source into a doc. used for ads and hacking-->
+        <!--<iframe style = "border:0" src="page2.html" width="700" height="150">-->
+        <hr><br>
+
+        <!--Introduction to Buttons-->
+        <button onclick="doSomething()"> Click me!</button>
+        <!--the dosabled tag disables the button-->
+        <p id="test">Hello</p>
+
+        <script>
+            function doSomething() {
+                document.getElementById("test").innerHTML = "Goodbye"
+            }
+        </script>
+        <hr><br>
+
+        <!--Introduction to Forms-->
+        <form action="action_page.php" method="GET"><!--Use get for insecure data and post for secure data-->
+        <div>
+            <label for="fname"> First name</label>
+            <input type = "text" id="fname" name="fname" placeholder="Enter first name" required>
+            <!--Required tag makes the field required-->
+        </div>
+        <br>
+        <div>
+            <label for="lname"> Last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name">
+        </div>
+        <br>
+        <div>
+            <input type="reset">
+            <input type="submit">
+        </div>
+        <br>
+        <div>
+            <!--Password fields; wil be hidden-->
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" maxlength="20" required>
+            <!--maxlength determines the max length-->
+        </div>
+        <br>
+        <div>
+            <!--Email fields-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter email">
+        </div>
+        <br>
+        <div>
+            <!--Phone number field-->
+            <label for="phone">Phone #:</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000)-000-0000">
+        </div>
+        <br>
+        <div>
+            <!--Date field-->
+            <label for="bdate">Date of Birth:</label>
+            <input type="date" id="bdate" name="bdate">
+        </div>
+        <br>
+        <div>
+            <!--General Number field-->
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="1000" value="1">
+        </div>
+        </form>
+        <hr><br>
+
+        <!--Introduction to Radio buttons-->
+        <form>
+            <div>
+                <label for="title">title:</label>
+                
+                <label>Mr.</label>
+                <input type="radio" name="title" value="Mr.">
+
+                <label>Mrs.</label>
+                <input type="radio" name="title" value="Mrs.">
+
+                <label>Miss</label>
+                <input type="radio" name="title" value="Miss">
+            </div>
+            <br>
+            <div>
+                <input type="reset">
+                <input type="submit">
+            </div>
+            <br>
+        </form>
+        <br>
+
+        <!--Introduction to Drop Down Menus-->
+        <form>
+            <div>
+                <label for="payment">Payment Type:</label>
+                <select id="payment" name="payment">
+                    <option value="Visa">Visa</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Amex">American Express</option>
+                </select>
+            </div>
+        </form>
+        <br>
+
+        <!--Introduction to Checkboxes-->
+        <form>
+            <div>
+                <label for="Subscribe">Subscribe:</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+            </div>
+        </form>
+
+    </body>
+</html>

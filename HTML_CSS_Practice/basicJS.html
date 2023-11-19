@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing JS</title>
+    <style>
+        #countLabel {
+            display: block;
+            font-size: 50px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="basicJS.css">
+</head>
+<body>
+    <!----------------------------------------------------->
+    <div>
+        <h2><ins>Hypotenuse Calculator</ins></h2>
+    </div>
+    <div>
+        <label> Enter Side A: </label>
+        <input type="text" id="sideA" name="sideA" placeholder="Enter value for side A" required>
+    </div>
+    <div>
+        <label> Enter Side B: </label>
+        <input type="text" id="sideB" name="sideB" placeholder="Enter value for side B" required>
+    </div>
+    <div>
+        <button type="submit" id="submit">Calculate</button>
+    </div>
+    <br>
+    <div>
+        <label id="sideC"></label>
+    </div>
+    <br><hr>
+    <!----------------------------------------------------->
+
+    <div>
+        <h2><ins>Counter Program</ins></h2>
+    </div>
+    <label id="countLabel">0</label>
+    <br>
+    <button id="decreaseBtn"> Decrease</button>
+    <button id="resetButton">Reset</button>
+    <button id="increaseBtn">Increase</button>
+    <br><hr>
+    <!----------------------------------------------------->
+
+    <div>
+        <h2><ins>Generate Random Variable</ins></h2>
+    </div>
+    <div>
+        <label class="blockDisplay"> Enter Lower Bound: </label>
+        <input type="text" id="lower" placeholder="Enter lower bound here">
+    </div>
+    <div>
+        <label class="blockDisplay"> Enter Upper Bound: </label>
+        <input type="text" id="upper" placeholder="Enter upper bound here">
+    </div>
+    <div>
+        <button type="submit" id="randSubmit"> Generate </button>
+    </div>
+    <br>
+    <div>
+        <label id="randResult"></label>
+    </div>
+    <br><hr>
+    <!----------------------------------------------------->
+    
+    <div>
+        <h2><ins>Check which Checkbox is Checked</ins></h2>
+    </div>
+    <div>
+        <label for="pet">Select which pets you have: </label>
+        <label>Cat </label>
+        <input type="checkbox" id="cat" class="pet">
+        <label>Dog </label>
+        <input type="checkbox" id="dog" class="pet">
+        <label>Pig </label>
+        <input type="checkbox" id="pig" class="pet">
+    </div>
+    <br>
+    <div>
+        <button id="petSubmit" type="submit">Submit</button>
+    </div>
+    <br>
+    <div>
+        <label id="petResults"></label>
+    </div>
+    <br><hr>
+    <!----------------------------------------------------->
+
+    <div>
+        <h2><ins>Number Guessing Game</ins></h2>
+        <p>I'm thinking of a number between 1 and 100. Try to guess it!</p>
+    </div>
+    <div>
+        <input id="guess" type="text" placeholder="Enter guess here">
+        <button type="submit" id="guessSubmit">Guess</button>
+        <button type="reset" id="guessReset">Restart</button>
+    </div>
+    <br>
+    <label id="guessResult"></label>
+    <br><hr>
+    <!----------------------------------------------------->
+
+    <div>
+        <h2><ins>Temperature Converter</ins></h2>
+    </div>
+    <div>
+        <label class="blockDisplay">Celsius (°C): </label>
+        <input id="celsius" type="text" placeholder="Enter celsius here">
+    </div>
+    <div>
+        <label class="blockDisplay">Fahrenheit (°F): </label>
+        <input id="fahrenheit" type="text" placeholder="Enter fahrenheit here">
+    </div>
+    <br><hr>
+    <!----------------------------------------------------->
+
+    
+
+    <!----------------------------------------------------->
+    <script src="basicJS.js"></script>
+    
+</body>
+</html>

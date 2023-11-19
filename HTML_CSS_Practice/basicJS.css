@@ -1,0 +1,6 @@
+.blockDisplay {
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+/*.randVar:after { content: ": " }*/
