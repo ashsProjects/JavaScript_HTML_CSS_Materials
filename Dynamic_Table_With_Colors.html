@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Ayush Adhikari">
+    <title>JavaScript/JQuery Practice</title>
+
+    <style>
+        body {margin: 0;}
+        #topBar {display: flex;}
+        #topName {flex: 1 1 0; text-align: left;}
+        #stepCounter {
+            text-align: right;
+            padding: 0px 20px;
+            font-size: 2em;
+            background:black;
+            color: white
+        }
+        #tableStrip {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        #tableStrip td {
+            border: 5px solid black;
+            width: 5vw;
+            height: 5vw;
+        }
+        #tableStrip .selected {
+            border: 8px solid lightgreen;
+        }
+        #mainTable {
+            border: 1px solid lightgray;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        #mainTable td {
+            border: 1px solid lightgray;
+            width: 2.5vw;
+            height: 2.5vw;
+        }
+        .black {background-color: black;}
+        .red {background-color: red;}
+        .blue {background-color: blue;}
+        .yellow {background-color: yellow;}
+        .green {background-color: green;}
+        .purple {background-color: purple;}
+        .orange {background-color: orange;}
+        .cyan {background-color: cyan;}
+        .magenta {background-color: magenta;}
+        .gray {background-color: gray;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="generateTables()">
+    <table id="tableStrip"></table>
+    <br>
+    <table id="mainTable"></table>
+    <script nonce="8IBTHwOdqNKAWeKl7plt8g==">
+        $(document).ready(() => {
+            var currSelectedID = "#strip1";
+            var selectedColor = "black";
+
+            $("td[id^='strip']").on("click", function() {
+                let currColor = $(this).attr('class');
+                if (currColor.includes(selectedColor)) return;
+
+                let className = `#mainTable .${selectedColor}`;
+                
+                $(className).each(function() {
+                    $(this).removeClass(selectedColor);
+                    $(this).addClass(currColor);
+                });
+                
+                $(this).addClass("selected");
+                $(currSelectedID).removeClass("selected");
+                selectedColor = currColor;
+                currSelectedID = $(this)
+            });
+
+            $("td[id^='cell']").on("click", function() {
+                const coords = $(this).attr('id').substring(4).split("-");
+
+                coordUp = "#cell" + (coords[0] - 1) + "-" + coords[1];
+                coordDown = "#cell" + (parseInt(coords[0]) + 1 * 1) + "-" + coords[1];;
+                coordLeft = "#cell" + coords[0] + "-" + (coords[1] - 1);
+                coordRight = "#cell" + coords[0] + "-" + (parseInt(coords[1]) + 1);
+
+                $(this).toggleClass(selectedColor);
+                $(coordUp).toggleClass(selectedColor);
+                $(coordDown).toggleClass(selectedColor);
+                $(coordLeft).toggleClass(selectedColor);
+                $(coordRight).toggleClass(selectedColor);
+            });
+        });
+
+        function generateTables() {
+            let tableStrip = document.getElementById("tableStrip");
+            let mainTable = document.getElementById("mainTable");
+            const colors = ["black", "red", "blue", "yellow", "green", "purple", "orange", "cyan", "magenta", "gray"];
+
+            let stripBuilder = "<tr>";
+            for (i = 0; i < 10; i++) {
+                if (i == 0) stripBuilder += `<td id='strip1' class='selected ${colors[i]}'></td>`;
+                else stripBuilder += `<td id='strip${i}' class='${colors[i]}'></td>`;
+            }
+            stripBuilder += "</tr>";
+
+            let mainBuilder = "";
+            for (i = 0; i < 20; i++) {
+                mainBuilder += "<tr>";
+                for (j = 0; j < 20; j++) {
+                    mainBuilder += `<td id='cell${i}-${j}' class=''></td>`;
+                }
+                mainBuilder += "</tr>";
+            }
+
+            tableStrip.innerHTML = stripBuilder;
+            mainTable.innerHTML = mainBuilder;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Ayush Adhikari">
+    <title>jQuery LOAD</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./product.css">
+</head>
+<body>
+    <header>
+        <p>SUNGLASSES</p>
+    </header>
+    <main>
+        <div id="container">
+
+        </div>
+    </main>
+    <footer>
+        <p>Part of a CS312 web design project. Product not actually for sale.</p>
+    </footer>
+    <script>
+        $(document).ready(() => {
+            $('#container').load('Matsuda.html');
+            $(document).on('click', '.other', function(e) {
+                let page_name = $(this).attr('src').split('.')[0];
+                let page = `${page_name}.html`;
+                $('#container').load(page);
+            });
+        });
+    </script>
+</body>
+</html>

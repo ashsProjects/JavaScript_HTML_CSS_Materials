@@ -1,0 +1,28 @@
+<nav>
+    <ul>
+        <li>
+            <form method="POST">
+                <input type="hidden" name="page" value="homepage">
+                <input type="submit" value="HOME">
+            </form>
+        </li>
+        <li>
+            <form method="GET">
+                <input type="hidden" name="direction" value="<?php echo $opp_direction ?>">
+                <input type="submit" value="GO <?php echo strtoupper($opp_direction) ?>">
+            </form>
+        </li>
+        <li>
+            <form method="POST">
+                <input type="hidden" name="page" value="one">
+                <input type="submit" value="ONE">
+            </form>
+        </li>
+        <li>
+            <form method="POST">
+                <input type="hidden" name="page" value="two">
+                <input type="submit" value="TWO">
+            </form>
+        </li>
+    </ul>
+</nav>

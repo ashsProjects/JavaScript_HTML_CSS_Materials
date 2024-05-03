@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: Verdana, sans-serif;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    height: 2vh;
+    padding: 10px 0px 5px;
+    background-color: #D8CEB8;
+}
+
+footer {
+    position: fixed;
+    font-size: 14px;
+    bottom: 0;
+    padding: 10px;
+    border-top: 1px solid white;
+    width: 100%;
+    background-color: #e6dfd1;
+}
+
+main {
+    background-image: linear-gradient(to right, #b8d8be, #e8f4ea);
+    height: 100%;
+    width: 100vw;
+}
+
+#container {
+    position: fixed;
+    top: 20%;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    overflow-y: scroll !important;
+}
+
+#imageContainer img {
+   width: 100%; 
+   max-width: 1000px;
+   height: auto;
+   max-height: 800px;
+   border-radius: 15px;
+}
+
+#infoContainer {
+    width: 30%;
+    margin: 10px 20px;
+}
+
+#addToBag {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+#description {
+    margin: 25px 0px;
+    border-bottom: 1px solid white;
+    padding-bottom: 25px;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+h5, h6 {
+    font-weight: normal;
+}
+
+#otherOptions {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+    overflow-x: scroll;
+}
+#otherOptions img {
+    margin: 5px;
+    border-radius: 15px;
+    max-width: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    #container {flex-direction: column;}
+    #imageContainer img {width: 100%; max-width: 400px; height: 100%;}
+    #infoContainer {width: 80%}
+}
